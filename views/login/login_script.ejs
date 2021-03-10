@@ -1,0 +1,16 @@
+<script>
+    const cadastro = document.querySelector('#cadastrar')
+    const entrar = document.querySelector('#entrar')
+    const alterar = document.querySelector('.alterar')
+    function acesso() {
+        if (!cadastro.style.display || cadastro.style.display == 'none') {
+            cadastro.style.display = 'block'
+            entrar.style.display = 'none'
+            alterar.textContent = 'Login'
+        } else {
+            cadastro.style.display = 'none'
+            entrar.style.display = 'block'
+            alterar.textContent = 'Criar conta'
+        }
+    }
+</script>

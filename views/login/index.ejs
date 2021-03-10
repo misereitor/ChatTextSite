@@ -1,0 +1,29 @@
+<% include ../header %>
+    <header class="row-fluid text-center">
+        <h1>Chat</h1>
+        <h4>Bem-vindo!</h4>
+    </header>
+    <section class="row-fluid text-center">
+        <form action="/cadastrar" method="post" id="entrar">
+            <input type="hidden" name="_csrf" value="<%- _csrf %>">
+            <input type="text" name="usuario[email]" placeholder="Digite seu e-mail.">
+            <br>
+            <input type="password" name="usuario[password]" placeholder="Digite seu senha.">
+            <br>
+            <button type="submit" class="btn btn-success">Entrar</button>
+        </form>
+        <form action="/cadastrar" method="post" id="cadastrar" hidden>
+            <input type="hidden" name="_csrf" value="<%- _csrf %>">
+            <input type="text" name="usuario[nome]" placeholder="Digite seu nome.">
+            <br>
+            <input type="text" name="usuario[email]" placeholder="Digite seu e-mail.">
+            <br>
+            <input type="password" name="usuario[password]" placeholder="Digite seu senha.">
+            <br>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+        <button type="button" class="btn btn-success alterar" onclick="acesso()">Criar conta</button>
+
+    </section>
+    <% include login_script.ejs %>
+        <% include ../footer %>
