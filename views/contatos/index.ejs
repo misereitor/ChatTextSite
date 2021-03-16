@@ -15,6 +15,8 @@
           </tr>
         </thead>
         <tbody>
+          <!--<%contatos.sort((a,b)=> a.nome.toLowerCase() < b.nome.toLowerCase() ? -1 : a.nome.toLowerCase()>
+              b.nome.toLowerCase()? 1: 0)%> -->
           <% contatos.forEach(function(contato) { %>
             <tr>
               <td>
@@ -35,6 +37,6 @@
       </table>
     </section>
   </section>
-  <% include notify_script %>
-    <% include ../exit %>
-      <% include ../footer %>
+  <% include ../exit %>
+    <% include ../footer %>
+      <% include notify_script %>

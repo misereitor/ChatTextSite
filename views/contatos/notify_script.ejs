@@ -13,7 +13,7 @@
     const opts = {
       el: 'notify_' + email
       , msg: 'Online'
-      , classes: 'label label-success'
+      , classes: 'online label label-success'
     };
     notify(opts);
   });
@@ -36,5 +36,24 @@
     notify(opts);
     const chat = document.getElementById('chat_' + data.email);
     chat.href = '/chat?sala=' + data.sala;
+    novaMensagem()
   });
+</script>
+<script>
+  function novaMensagem() {
+    const contato = document.querySelectorAll('tbody tr')
+    const contatos = document.querySelector('tbody')
+    let contatosdois = []
+    contato.forEach(c => {
+      if (c.querySelector('span').innerText == 'Mensagem') {
+        contatosdois.unshift(`<tr><td>${c.querySelector('td').innerText}</td><td>${c.querySelectorAll('td')[1].innerText}</td><td><span id="${c.querySelector('span').id}" class="${c.querySelector('span').classList}">${c.querySelector('span').innerText}</span></td><td><a href="${c.querySelector('a').href}" id="${c.querySelector('a').id}" class="${c.querySelector('a').classList}">${c.querySelector('a').innerText}</a></td></tr>`)
+      } else {
+        contatosdois.push(`<tr><td>${c.querySelector('td').innerText}</td><td>${c.querySelectorAll('td')[1].innerText}</td><td><span id="${c.querySelector('span').id}" class="${c.querySelector('span').classList}">${c.querySelector('span').innerText}</span></td><td><a href="${c.querySelector('a').href}" id="${c.querySelector('a').id}" class="${c.querySelector('a').classList}">${c.querySelector('a').innerText}</a></td></tr>`)
+      }
+    })
+    contatos.innerHTML = ''
+    contatosdois.forEach(c => {
+      contatos.innerHTML += c
+    })
+  }
 </script>
