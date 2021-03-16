@@ -24,12 +24,16 @@ Para instalá-lo em sua máquina faça os comandos a seguir:
 
 Se não quiser criar esta variável você rode o comando `NODE_ENV=development npm start`.
 
-E depois acesse no seu navegador o endereço: http://localhost:3000
+E depois acesse no seu navegador o endereço: http://localhost:8080
 
 ## Autor
 Caio Ribeiro Pereira
 Email: <caio.ribeiro.pereira@gmail.com>
 Twitter: <http://twitter.com/crp_underground>
+
+# Edição e modificação
+Misael Miranda
+Email: misaelbahia1@hotmail.com
 
 ## Licença
 
